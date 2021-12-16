@@ -18,25 +18,19 @@
     .catch(err => console.error(err))
 
     })
-    
-    // // const movieId = 2
-    // // const changes = {
-    // // release: 2021
-    // // }
+document.addEventListener('click', event => {
+  if (event.target.classList.contains('deleteBtn')) {
+    let songID = event.target.getAttribute('id')
+    //delete by songID
+    axios.delete(`/api/songs/${songID}`)
+    .then(() => console.log('Song deleted!'))
+    .catch(err => console.error(err))
+  }
+
+})  
     
 
-    // //update
-    // axios.put(`/api/movies/${movieId}`, changes)
-    // .then(() => console.log('movie updated!'))
-    // .catch(err => console.error(err))
-    
-    // // const movieId = 3
-    
 
-    // //delete
-    // axios.delete(`/api/movies/${movieId}`)
-    // .then(() => console.log('movie deleted!'))
-    // .catch(err => console.error(err))
 
 //get database and display
 axios.get('/api/songs')
@@ -65,7 +59,7 @@ axios.get('/api/songs')
                 <a href=${item.link} >Youtube Link</a >
                 <hr>
                 <button type="like" class="btn btn-primary" id="likeBtn">Like</button>
-                <button type="delete" class="btn btn-danger" id="deleteBtn">Delete</button>
+                <button type="delete" class="btn btn-danger deleteBtn" id="${item.id}">Delete</button>
               </div >
             </div >
           </div >`
