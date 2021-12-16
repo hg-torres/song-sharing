@@ -1,0 +1,26 @@
+{
+  "name": "song-sharing",
+  "version": "1.0.0",
+  "description": "song-sharing",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hg-torres/song-sharing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hg-torres/song-sharing/issues"
+  },
+  "homepage": "https://github.com/hg-torres/song-sharing#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0-beta.3"
+  }
+}
