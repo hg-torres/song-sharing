@@ -57,13 +57,13 @@ function loadData() {
         //change the innerHtml of the created div
         songElem.innerHTML = `
             <h2 class="accordion-header" id= ${item.id}>
-              <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapse${item.id}" aria-expanded="false" aria-controls="panelsStayOpen-collapse${item.id}">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse${item.id}" aria-expanded="false" aria-controls="collapse${item.id}">
                 ${item.title}
               </button>
             </h2>
-            <div id="panelsStayOpen-collapse${item.id}" class="accordion-collapse collapse show"
-              aria-labelledby="panelsStayOpen-heading${item.id}">
+            <div id="collapse${item.id}" class="accordion-collapse collapse"
+              aria-labelledby="heading${item.id}">
               <div class="accordion-body">
                 <p> ${item.description} </p>
                 <a href=${item.link} >Youtube Link</a >
